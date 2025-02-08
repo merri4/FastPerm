@@ -59,14 +59,14 @@ test/ 안에 3가지 input 파일의 예시가 있으니 포맷을 확인하시�
 예를 들어 이런 커맨드를 사용하면, 
 
 ```
-./main perm_sampledata.txt perm_coldata.txt perm_counts.txt result.csv 10
+./main perm_sampledata.txt perm_coldata.txt perm_counts.txt result.csv 1000
 ```
 
 - `perm_sampledata.txt`를 `NameCC table`로,
 - `perm_coldadta.txt`을 `BarcodeName table`로,
 - `perm_coutns.txt`를 `GeneBarcode table`로,
 - `result.csv`를 output 경로로,
-- `permutation 횟수`를 `10회`로
+- `permutation 횟수`를 `1000회`로
 
 지정하고 프로그램이 실행됩니다. 
 
