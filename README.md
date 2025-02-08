@@ -1,7 +1,6 @@
 
 
 ## What is FastPerm?
----
 FastPerm은 single-cell RNA-seq data에 대해 비교군/대조군 간 통계 검정을 수행하는 프로그램입니다. scRNA-seq data를 pseudobulk하고, non-parametric test인 permutation test(순열 검정법)을 사용합니다. FastPerm을 활용해 DE analysis를 수행하거나 GSEA(Gene Set Enrichment Analysis)등을 수행할 수 있습니다. 특히, pseudobulk시에 샘플의 수가 적어져 parametric test를 사용하기 어려운 상황에서 사용할 수 있습니다.
 
 
@@ -21,7 +20,6 @@ FastPerm은 single-cell RNA-seq data에 대해 비교군/대조군 간 통계 �
 
 &nbsp;
 ## How to build
----
 git clone
 
 ```
@@ -44,7 +42,6 @@ g++ -o main main.o myfuncs.o -lpthread
 
 &nbsp;
 ## How to use
----
 필수적으로 넣어줘야 하는 파라미터는 5가지입니다.
 3가지는 input 파일, 1가지는 output 경로, 나머지 하나는 permutation 횟수입니다.
 
@@ -75,8 +72,6 @@ test/ 안에 3가지 input 파일의 예시가 있으니 포맷을 확인하시�
 
 &nbsp;
 ## Troubleshooting
----
-
 오류가 났을 경우 체크해봐야 할 주요 사항은 다음과 같습니다.
 - `NameCC table` 의 구분자는 쉼표, case와 control은 반드시 **소문자로만** 작성되어야 합니다.
 - `BarcodeName table`에서의 cell에 대응하는 sample 정보는 `NameCC table`의 샘플 이름들과 반드시 일치해야 합니다. `NameCC table`에서 나오지 않은 샘플명이 `BarcodeName table`에서 나오면 프로그램이 오작동합니다. 
@@ -85,8 +80,6 @@ test/ 안에 3가지 input 파일의 예시가 있으니 포맷을 확인하시�
 
 &nbsp;
 ## Reading logs
----
-
 ```
 // 인풋에 오류가 없을 경우 이 메시지가 출력됩니다. 받은 파라미터들을 보여줍니다.
 Input Taken.
@@ -157,7 +150,6 @@ Programme Done! Terminating...
 
 &nbsp;
 ## Reading output result
----
 ```
 Gene,Case_Mean,Control_Mean,pct_case,pct_ctrl,lfc,p_val_1t,p_val_2t
 gene1,8.066215,7.748651,5,5,0.317564,0.100000,0.200000
@@ -187,7 +179,6 @@ gene3,inf,inf,0,0,NA,NA,NA
 
 &nbsp;
 ## Development History
----
 - binary search로 열별 누산.
 - ifstream 파일 여는 코드 더 간단하게 수정 (while(file.good()) 대신 while(getline())으로)
 - 동기식 처리에서 비동기 처리로 전환 (parse_gene_barcode_table, pseudobulk). 비동기 처리 시 pseudobulk 후 mismatch가 발생하여, 뮤텍스 사용
