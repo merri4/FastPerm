@@ -1,4 +1,0 @@
-Filia,case
-Lucy,control
-Fukua,case
-Evie,control
