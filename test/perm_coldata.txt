@@ -1,8 +1,8 @@
 A,Filia
 B,Marie
-C,Charls
+C,Fukua
 D,Annie
-E,Charls
+E,Fukua
 F,Marie
 G,Annie
 H,Filia
