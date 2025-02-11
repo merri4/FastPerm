@@ -64,7 +64,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#include "myfuncs.h"
+#include "functions.h"
 
 using namespace std;
 
@@ -908,7 +908,7 @@ void print_result_pval(string path) {
 // ============================================================================================================================
 // ============================================================================================================================
 
-// command : ./main ./d_NameCC.txt ./d_BarcodeName.txt ./d_GeneBarcode.txt ./result_p_val.txt 100 1
+// command : ./fastperm ./d_NameCC.txt ./d_BarcodeName.txt ./d_GeneBarcode.txt ./result_p_val.txt 100 1
 
 int main(int argc, char* argv[]) {
 

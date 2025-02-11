@@ -6,18 +6,15 @@ LDFLAGS = -lpthread
 .c.o :
 	$(CC) -c $(CFLAGS) $<
 
-ALL = main myfuncs fastread
+ALL = fastperm functions
 
 all: $(ALL)
 
-main : main.o myfuncs.o
+fastperm : fastperm.o functions.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-myfuncs : myfuncs.o
+functions : functions.o
 	$(CC) -o $@ $< $(LDFLAGS)
-
-fastread : fastread.o myfuncs.o
-	$(CC) -o $@ $^ $(LDFLAGS)
 
 clean :
 	rm -rf *.o $(ALL)

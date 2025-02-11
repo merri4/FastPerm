@@ -26,18 +26,18 @@ git clone
 > git clone git@github.com:merri4/FastPerm.git
 ```
 
-해당 디렉토리 이동 후, make main 입력
+해당 디렉토리 이동 후, make fastperm 입력
 
 ```
-> make main
+> make fastperm
 ```
 
 다음과 같은 로그가 나오면 정상입니다.
 
 ```
-g++    -c -o main.o main.cpp
-g++    -c -o myfuncs.o myfuncs.cpp
-g++ -o main main.o myfuncs.o -lpthread
+g++    -c -o fastperm.o fastperm.cpp
+g++    -c -o functions.o functions.cpp
+g++ -o fastperm fastperm.o functions.o -lpthread
 ```
 
 &nbsp;
@@ -59,7 +59,7 @@ test/ 안에 3가지 input 파일의 예시가 있으니 포맷을 확인하시�
 예를 들어 이런 커맨드를 사용하면, 
 
 ```
-./main perm_sampledata.txt perm_coldata.txt perm_counts.txt result.csv 1000
+./fastperm ./test/perm_sampledata.txt ./test/perm_coldata.txt ./test/perm_counts.txt ./test/result.csv 1000
 ```
 
 - `perm_sampledata.txt`를 `NameCC table`로,
